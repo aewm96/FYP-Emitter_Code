@@ -5,7 +5,8 @@ int LED_Driving_pin=7;
 
 //Hello = 8,5,12,12,15
 //World = 23,15,18,12,4
-  int a[]={H, E, L, L, O, W, O, R, L, D};
+  //int a[]={H, E, L, L, O, W, O, R, L, D};
+  int a[]={8, 5, 12, 12, 15, 23, 15, 18, 12, 4};
   int b[10][8];
 void setup() {
   Serial.begin(9600);
@@ -33,7 +34,7 @@ void loop() {
 void BDC(){
   for (int i=0; i<10; i++){
     for (int j=0; j<8; j++){
-      b[i][j]=(a[i]&(int)pow(2,j))/(int)pow(2,j);
+      b[i][j]=(a[i] & (int)pow(2,j))/(int)pow(2,j);
     }
   }
 }
