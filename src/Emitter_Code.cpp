@@ -15,7 +15,7 @@ void setup() {
   }
 
 void LED_BIN(){
-  for (int i=0; i<10; i++){
+  for (int i=0; i<1; i++){
     for (int j=0; j<8; j++){
       if(bitRead(a[i],j) == 1){
         digitalWrite(LED_Driving_pin, HIGH);
@@ -29,14 +29,32 @@ void LED_BIN(){
 }
 }
 
+void Initializer(){
+  //Blink 1
+  digitalWrite(LED_Driving_pin, HIGH);
+  delay(100);
+  digitalWrite(LED_Driving_pin, LOW);
+  delay(100);
+  //Blink 2
+  digitalWrite(LED_Driving_pin, HIGH);
+  delay(100);
+  digitalWrite(LED_Driving_pin, LOW);
+  delay(100);
+  //Blink 3
+  digitalWrite(LED_Driving_pin, HIGH);
+  delay(100);
+  digitalWrite(LED_Driving_pin, LOW);
+  delay(100);
+  //Blink 4
+  digitalWrite(LED_Driving_pin, HIGH);
+  delay(100);
+  digitalWrite(LED_Driving_pin, LOW);
+  delay(100);
+}
+
 void loop() {
-  
+  Initializer();
   LED_BIN();
-  /*Serial.println("-------------------------");
-  for (int i=0; i<10; i++){
-      Serial.println(a[i], BIN);
-  }
-  Serial.println("-------------------------");*/
 }
 
 
